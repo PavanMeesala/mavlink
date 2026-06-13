@@ -2079,5 +2079,18 @@
       <field type="int32_t"  name="lat">Latitude (degE7).</field>
       <field type="int32_t"  name="lon">Longitude (degE7).</field>
     </message>
+    <message id="55002" name="TARGET_PX">
+      <description>
+        Message to report a target's position in pixel coordinates,from a vision system.
+      </description>
+      <field type="uint16_t" name="dx">Number of pixels to move in the x direction.</field>
+      <field type="uint16_t" name="dy">Number of pixels to move in the y direction.</field>
+    </message>
+    <message id="52002" name="RESCUE_START_SEARCH">
+        <description>Command to begin search navigation through previously loaded RESCUE_WP waypoints.</description>
+        <field type="uint8_t" name="target_system">System ID</field>
+        <field type="uint8_t" name="target_component">Component ID</field>
+        <field type="uint8_t" name="start">1 to start search, 0 reserved</field>
+    </message>
   </messages>
 </mavlink>
